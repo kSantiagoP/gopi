@@ -1,18 +1,14 @@
-// Cada nova pasta, assume-se um submodule
-// Normalmente cada pasta vai ter um arquivo .go de nome igual dentro
+// each new directory usually means a new submodule
+// also, it usually (not always) have a .go code with the same name
 package router
 
 import "github.com/gin-gonic/gin"
 
 func Initialize() {
+	//initializing router
 	router := gin.Default()
 
-	//Definir rota
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	initializeRoutes(router)
 
 	router.Run(":4000") // listen and serve on localhost:4000
 }
