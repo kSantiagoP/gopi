@@ -1,0 +1,13 @@
+todolist.txt
+.env
+*.exe
+*.dll
+*.so
+*.dylib
+
+*.test
+*.out
+
+Db Folder
+
+db/
