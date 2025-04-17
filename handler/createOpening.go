@@ -7,6 +7,18 @@ import (
 	"github.com/kSantiagoP/gopi/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summaary Create opening
+// @Description Create a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Success 200 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
 func CreateOpeningHandler(c *gin.Context) {
 	request := CreateOpeningRequest{}
 
